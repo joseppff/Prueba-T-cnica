@@ -1,3 +1,12 @@
+.main-content {
+  background: #fff;
+  color: #222;
+  min-height: 60vh;
+  border-radius: 8px;
+  margin: 24px;
+  padding: 24px;
+  box-shadow: 0 2px 8px #e3e3e3;
+}
 /* Estilo base para los botones del menu */
 .nav-btn {
   margin-right: 10px;

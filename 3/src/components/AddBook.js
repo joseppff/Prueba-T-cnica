@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
 const AddBook = ({ onAdd }) => {
+  // estados 
   const [titulo, setTitulo] = useState('');
   const [genero, setGenero] = useState('');
   const [autor, setAutor] = useState('');
 
+  // manejar el submit del formulario
   const handleSubmit = (e) => {
+    // no recargar al enviar 
     e.preventDefault();
     if (!titulo || !genero || !autor) return;
     onAdd({ titulo, genero, autor });

@@ -4,20 +4,26 @@ import BookList from './components/BookList';
 import AddBook from './components/AddBook';
 
 
-
+// Componente principal
+// useState: para manejar el estado de la página actual y la lista de libros
+// useEffect: para cargar los libros desde el backend
 function App() {
+  // Estado de página actual y la lista de libros
   const [page, setPage] = useState('home');
   const [books, setBooks] = useState([]);
 
   // Cargar libros al iniciar
   useEffect(() => {
+    // petición HTTP GET, pasar formato JSON, guardar los datos y manejar errror
     fetch('http://localhost:4000/api/libros')
       .then(res => res.json())
       .then(data => setBooks(data))
       .catch(() => setBooks([]));
   }, []);
 
+  // Función para agregar un libro
   const handleAddBook = (book) => {
+    // petición HTTP POST, enviar datos en JSON y actualizar la lista
     fetch('http://localhost:4000/api/libros', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
@@ -25,7 +31,6 @@ function App() {
     })
       .then(res => res.json())
       .then(() => {
-        // Recargar la lista después de agregar
         fetch('http://localhost:4000/api/libros')
           .then(res => res.json())
           .then(data => setBooks(data));
@@ -52,7 +57,7 @@ function App() {
           </button>
         </nav>
       </header>
-      <main style={{ background: '#fff', color: '#222', minHeight: '60vh', borderRadius: 8, margin: 24, padding: 24, boxShadow: '0 2px 8px #e3e3e3' }}>
+  <main className="main-content">
         {page === 'home' && <BookList books={books} />}
         {page === 'add' && <AddBook onAdd={handleAddBook} />}
       </main>
