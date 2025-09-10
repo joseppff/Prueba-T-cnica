@@ -23,13 +23,4 @@ Ejemplo:
 entrada = [4, 2, 7, 2, 4, 9, 1]
 salida = [1, 2, 4, 7, 9]
 
-Solución:
-Python tiene muchas funcionalidades integradas que facilitan la manipulación de listas.
-1. Resivo la lista
-2. transformo la lista string entregada por una lista de enteros
-3. Llamo a la funcion ordenar_eliminar
-4. Dentro de la funcion se elimina los duplicados convirtiendo la lista en un conjunto (set)
-5. Luego ordeno la lista de menor a mayor con el metodo sort()
-6. Finalmente entrego la lista ordenada y sin duplicados
-
 """

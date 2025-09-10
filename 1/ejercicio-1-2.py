@@ -29,17 +29,5 @@ Ejemplo:
 entrada = [4, 2, 7, 2, 4, 9, 1]
 salida = [1, 2, 4, 7, 9]
 
-Solución:
-Se implementa una solución sin usar funciones integradas de Python para eliminar duplicados y ordenar la lista.
-1. Resivo la lista
-2. transformo la lista string entregada por una lista de enteros
-3. Llamo a la funcion ordenar_eliminar
-4. Dentro de la funcion: 
-    A. Se recorre la lista original y se añaden a una nueva_lista SOLO los numero que no se encuentren ya la nueva_lista
-    B. Luego se ordena la nueva_lista usando el algoritmo de ordenamiento burbuja.
-    Len toma la cantidad de elementos y range genera el indice para recorrer la lista.
-    Con doble for se hace un recorrido en doble imension para comparar cada elemento con los demas y ordenarlos.
-
-5. Finalmente entrego la nueva_lista ordenada y sin duplicados
 
 """
