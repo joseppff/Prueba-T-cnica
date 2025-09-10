@@ -1,0 +1,17 @@
+[
+  {
+    "titulo": "Harry Potter",
+    "genero": "Fantasia",
+    "autor": "jk rowling"
+  },
+  {
+    "titulo": "Odisea",
+    "genero": "Poesia Epico",
+    "autor": "Homero"
+  },
+  {
+    "titulo": "Don Quijote de la Mancha",
+    "genero": "Fision",
+    "autor": "Miguel de Cervantes"
+  }
+]
